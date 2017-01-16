@@ -7,8 +7,9 @@ RUN \
 	software-properties-common \
  && add-apt-repository ppa:wine/wine-builds \
  && apt-get -qq update \
- && apt-get -qqy install --no-install-recommends winehq-devel \
- && apt-get clean \
+ && apt-get -qqy install --no-install-recommends winehq-devel winetricks xvfb \
+ && apt-get -qqy purge software-properties-common \
+ && apt-get -y autoclean \
  && rm -rf /var/lib/apt/lists/* 
 
 CMD ["/bin/bash"]
