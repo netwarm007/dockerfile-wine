@@ -13,6 +13,7 @@ RUN \
  && rm -rf /var/lib/apt/lists/* 
 
 COPY entry_point.sh /entry_point.sh
+RUN chmod 744 /entry_point.sh
 ENTRYPOINT ["/entry_point.sh"]
 CMD ["--version"]
 
