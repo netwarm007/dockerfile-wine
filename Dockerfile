@@ -12,5 +12,7 @@ RUN \
  && apt-get -y autoclean \
  && rm -rf /var/lib/apt/lists/* 
 
-CMD ["/bin/bash"]
+COPY entry_point.sh /entry_point.sh
+ENTRYPOINT ["/entry_point.sh"]
+CMD ["--version"]
 
