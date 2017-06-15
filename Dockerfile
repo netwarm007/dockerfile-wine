@@ -1,5 +1,5 @@
-FROM ubuntu:latest
-MAINTAINER Chen, Wenli <chenwenli@chenwenli.com>
+FROM tim03/ubuntu
+Label maintainer Chen, Wenli <chenwenli@chenwenli.com>
 
 RUN \
  dpkg --add-architecture i386 \
